@@ -21,27 +21,6 @@ The project uses the following components:
 - PostgreSQL
 - Confluent Control Center
 
-## Repository Structure
-
-The repository has the following structure:
-
-```
-cdc-streaming/
-├── docker-compose.yml
-├── README.md
-├── requirements.txt
-├── images/
-│   ├── architecture.png
-│   ├── control_center.png
-│   ├── debezium_connector.png
-│   └── docker.png
-├── scripts/
-│   └── generate_transactions.py
-└── src/
-  ├── kafka/
-  ├── postgres/
-  └── debezium/
-```
 
 ## Prerequisites
 
