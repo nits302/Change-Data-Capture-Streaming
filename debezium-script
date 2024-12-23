@@ -1,0 +1,20 @@
+## go to debezium container and run this command,
+## this will handle the decimal in Debezium and show the amount of transaction by String
+
+curl -H 'Content-Type: application/json' localhost:8083/connectors --data '
+{
+    "name": "postgres-connector",
+    "config": { 
+        "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+        "plugin.name": "pgoutput",
+        "database.hostname": "postgres",
+        "database.port": "5432",
+        "database.user": "postgres",
+        "database.password": "postgres",
+        "database.dbname": "financial_db",
+        "server.name": "postgres",
+        "decimal.handling.mode": "string",
+        "topic.prefix": "cdc",  
+        "table.include.list": "public.transactions"
+    }
+}'
